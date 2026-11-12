@@ -1,0 +1,818 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@400;500;600&display=swap');
+
+:root {
+    --wine: #641c36;
+    --deep: #35101f;
+    --rose: #a44c69;
+    --cream: #fbf6f2;
+    --ink: #291b20;
+    --muted: #806d73;
+    --line: #eadde1;
+    --gold: #c69a69
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    background: #fffdfb;
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+header {
+    height: 85px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--line);
+    position: sticky;
+    top: 0;
+    background: #fffdfbf0;
+    backdrop-filter: blur(12px);
+    z-index: 9
+}
+
+.logo {
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 20px;
+    color: var(--wine)
+}
+
+.logo span {
+    color: var(--gold)
+}
+
+.logo small {
+    display: block;
+    font-size: 8px;
+    letter-spacing: 3px;
+    color: #9b818a;
+    margin-top: 5px
+}
+
+nav {
+    display: flex;
+    gap: 27px
+}
+
+nav a {
+    font-size: 12px;
+    color: #765f68
+}
+
+nav a:hover {
+    color: var(--wine)
+}
+
+.cta {
+    display: inline-block;
+    background: var(--wine);
+    color: white;
+    padding: 16px 20px;
+    border: 0;
+    border-radius: 3px;
+    font: 600 12px 'DM Sans';
+    cursor: pointer
+}
+
+.cta:hover {
+    background: var(--deep)
+}
+
+.small {
+    padding: 13px 16px
+}
+
+.menu {
+    display: none
+}
+
+.hero {
+    min-height: 580px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 55px 9%;
+    background: linear-gradient(110deg, #fbf6f2, #f8eee9);
+    align-items: center;
+    gap: 20px
+}
+
+.hero label,
+.intro label,
+.section label,
+.banner label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: var(--rose)
+}
+
+h1,
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    letter-spacing: -1px
+}
+
+h1 {
+    font-size: clamp(52px, 6vw, 78px);
+    line-height: 1.05;
+    margin: 20px 0
+}
+
+i {
+    color: var(--wine);
+    font-weight: 400
+}
+
+.hero p,
+.intro p {
+    max-width: 420px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9
+}
+
+.hero .note {
+    font-size: 10px;
+    margin-top: 55px;
+    color: #9b818a
+}
+
+.art {
+    height: 440px;
+    position: relative;
+    display: grid;
+    place-items: center
+}
+
+.circle {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: #ead4d7;
+    right: 8%
+}
+
+.pack {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #f8e9e9;
+    box-shadow: 0 25px 55px #57213930;
+    text-align: center
+}
+
+.pack b {
+    font-size: 10px;
+    border: 1px solid #ffffff55;
+    border-radius: 50%;
+    padding: 8px;
+    margin-bottom: 25px
+}
+
+.pack strong {
+    font: 22px 'Playfair Display'
+}
+
+.pack small {
+    font-size: 8px;
+    letter-spacing: 2px;
+    margin-top: 15px
+}
+
+.p1 {
+    width: 145px;
+    height: 245px;
+    background: linear-gradient(120deg, #8a3855, #4a162c);
+    border-radius: 24px 24px 35px 35px;
+    left: 22%;
+    top: 18%;
+    transform: rotate(-8deg)
+}
+
+.p2 {
+    width: 115px;
+    height: 190px;
+    background: linear-gradient(120deg, #c38a9e, #792b4b);
+    border-radius: 18px 18px 28px 28px;
+    right: 15%;
+    bottom: 10%;
+    transform: rotate(9deg)
+}
+
+.artword {
+    position: absolute;
+    left: 4%;
+    bottom: 7%;
+    font: italic 26px 'Playfair Display';
+    color: var(--wine);
+    z-index: 3
+}
+
+.ticker {
+    text-align: center;
+    background: var(--wine);
+    color: #f6dfe6;
+    padding: 18px;
+    font-size: 10px;
+    letter-spacing: 2px
+}
+
+.section {
+    padding: 85px 8%
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 30px
+}
+
+.head h2 {
+    font-size: 46px;
+    margin: 12px 0
+}
+
+.head>a {
+    font-size: 12px;
+    color: var(--wine)
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px
+}
+
+.visual {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.pink {
+    background: #f1dfe4
+}
+
+.peach {
+    background: #f6e5d9
+}
+
+.lilac {
+    background: #e9e2ed
+}
+
+.butter {
+    background: #f2e7cf
+}
+
+.rose {
+    background: #ead4d9
+}
+
+.green {
+    background: #dce8df
+}
+
+.jar,
+.tube,
+.bottle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #f8e9e9;
+    background: linear-gradient(135deg, #9d526e, #5d1a36);
+    box-shadow: 0 20px 35px #5d1a3625;
+    letter-spacing: 2px
+}
+
+.jar {
+    width: 130px;
+    height: 140px;
+    border-radius: 18px 18px 25px;
+    border-top: 18px solid #d8b8c4
+}
+
+.tube {
+    width: 95px;
+    height: 220px;
+    border-radius: 16px 16px 30px;
+    transform: rotate(8deg)
+}
+
+.bottle {
+    width: 105px;
+    height: 210px;
+    border-radius: 25px 25px 18px
+}
+
+.jar small,
+.tube small,
+.bottle small {
+    font: 15px 'Playfair Display';
+    text-align: center;
+    margin-top: 15px
+}
+
+.products h3 {
+    font-size: 13px;
+    margin: 16px 0 5px
+}
+
+.products h3 span {
+    float: right;
+    color: var(--wine)
+}
+
+.products p {
+    font-size: 10px;
+    color: var(--muted);
+    margin: 0
+}
+
+.banner {
+    background: var(--deep);
+    color: white;
+    padding: 75px 10%
+}
+
+.banner h2 {
+    font-size: 55px;
+    line-height: 1.1;
+    margin: 18px 0
+}
+
+.banner i {
+    color: #d8a6b7
+}
+
+.banner p {
+    font-size: 13px;
+    color: #d4b9c3;
+    margin-bottom: 28px
+}
+
+.light {
+    background: #f7e9e7;
+    color: var(--wine)
+}
+
+footer {
+    padding: 40px 8%;
+    background: #f8f0ed;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    align-items: center
+}
+
+footer>p {
+    font: italic 18px 'Playfair Display';
+    color: var(--rose)
+}
+
+footer div {
+    font-size: 11px;
+    color: var(--muted)
+}
+
+footer>small {
+    font-size: 9px;
+    color: #a18b93
+}
+
+.page {
+    padding: 65px 8% 100px
+}
+
+.intro {
+    text-align: center;
+    margin: 15px auto 60px
+}
+
+.intro h1 {
+    font-size: 65px;
+    margin: 17px 0
+}
+
+.intro p {
+    margin: auto
+}
+
+.tools {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 15px
+}
+
+.tools input {
+    padding: 14px;
+    width: 260px;
+    border: 1px solid var(--line);
+    font: 12px 'DM Sans'
+}
+
+.filter {
+    border: 1px solid var(--line);
+    background: white;
+    padding: 11px 15px;
+    border-radius: 25px;
+    font: 11px 'DM Sans';
+    cursor: pointer;
+    margin: 3px
+}
+
+.filter.active,
+.filter:hover {
+    background: var(--wine);
+    color: white
+}
+
+.shop-products {
+    row-gap: 35px
+}
+
+.demo {
+    font-size: 10px;
+    color: #a08b93;
+    text-align: center;
+    margin-top: 30px
+}
+
+.story {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9%;
+    align-items: center
+}
+
+.story-art {
+    height: 440px;
+    background: #f0dfe4;
+    display: grid;
+    place-items: center;
+    position: relative
+}
+
+.story-art div {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: var(--wine);
+    color: #f5dce4;
+    display: grid;
+    place-items: center;
+    font: 95px 'Playfair Display'
+}
+
+.story-art span,
+.stamp span {
+    color: var(--gold);
+    font-style: italic
+}
+
+.story-art small {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    letter-spacing: 3px;
+    color: var(--wine)
+}
+
+.story h2,
+.contact h2 {
+    font-size: 47px;
+    margin: 15px 0
+}
+
+.story p,
+.contact p {
+    font-size: 13px;
+    line-height: 2;
+    color: var(--muted)
+}
+
+.signature {
+    font: italic 17px 'Playfair Display'
+}
+
+.signature b {
+    letter-spacing: 2px;
+    color: var(--wine)
+}
+
+.values {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 80px;
+    border-top: 1px solid var(--line);
+    padding-top: 35px
+}
+
+.values label {
+    color: var(--gold)
+}
+
+.values h3 {
+    font: 26px 'Playfair Display';
+    color: var(--wine)
+}
+
+.values p {
+    font-size: 12px;
+    color: var(--muted)
+}
+
+.edits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px
+}
+
+.edit {
+    min-height: 340px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end
+}
+
+.edit label {
+    letter-spacing: 2px
+}
+
+.edit h2 {
+    font-size: 34px;
+    line-height: 1.1
+}
+
+.edit p {
+    font-size: 12px;
+    line-height: 1.8
+}
+
+.e1 {
+    background: #ead3dc;
+    color: #5b1a35
+}
+
+.e2 {
+    background: #f1dfd1;
+    color: #713b40
+}
+
+.e3 {
+    background: #e4dce9;
+    color: #4e315a
+}
+
+.quote {
+    text-align: center;
+    margin: 85px 0 40px;
+    color: var(--gold)
+}
+
+.quote p {
+    font: italic 29px 'Playfair Display';
+    color: var(--wine)
+}
+
+.quote small {
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: var(--muted)
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10%
+}
+
+.stamp {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    background: var(--wine);
+    color: #f5dce4;
+    display: grid;
+    place-items: center;
+    font: 35px 'Playfair Display'
+}
+
+.contact>div>label {
+    display: block;
+    margin-top: 25px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--rose)
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 17px
+}
+
+form label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--wine)
+}
+
+form input,
+form textarea,
+form select {
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    padding: 14px;
+    border: 1px solid var(--line);
+    font: 12px 'DM Sans'
+}
+
+form button {
+    align-self: start
+}
+
+#msg {
+    color: var(--wine);
+    font-size: 12px
+}
+
+@media(max-width:850px) {
+    nav {
+        gap: 13px
+    }
+
+    .hero {
+        padding: 45px 6%
+    }
+
+    .circle {
+        width: 280px;
+        height: 280px
+    }
+
+    .visual {
+        height: 250px
+    }
+}
+
+@media(max-width:650px) {
+    header {
+        height: 75px;
+        padding: 0 5%
+    }
+
+    .menu {
+        display: block;
+        border: 0;
+        background: none;
+        font-size: 24px;
+        color: var(--wine)
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 74px;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 22px 6%;
+        flex-direction: column;
+        gap: 20px
+    }
+
+    nav.open {
+        display: flex
+    }
+
+    .small {
+        display: none
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 50px 7% 20px
+    }
+
+    .hero h1 {
+        font-size: 58px
+    }
+
+    .art {
+        min-height: 360px
+    }
+
+    .circle {
+        width: 280px;
+        height: 280px
+    }
+
+    .ticker {
+        font-size: 8px
+    }
+
+    .section,
+    .page {
+        padding: 55px 6%
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px 12px
+    }
+
+    .visual {
+        height: 220px
+    }
+
+    .products h3 {
+        font-size: 11px
+    }
+
+    .products h3 span {
+        font-size: 10px
+    }
+
+    .head h2 {
+        font-size: 37px
+    }
+
+    .banner {
+        padding: 55px 7%
+    }
+
+    .banner h2 {
+        font-size: 45px
+    }
+
+    .intro h1 {
+        font-size: 51px
+    }
+
+    .tools {
+        flex-direction: column;
+        align-items: stretch
+    }
+
+    .tools input {
+        width: 100%
+    }
+
+    .story,
+    .contact {
+        grid-template-columns: 1fr;
+        gap: 35px
+    }
+
+    .story-art {
+        height: 330px
+    }
+
+    .values {
+        grid-template-columns: 1fr;
+        gap: 0;
+        margin-top: 50px
+    }
+
+    .edits {
+        grid-template-columns: 1fr
+    }
+
+    .edit {
+        min-height: 280px
+    }
+
+    .quote p {
+        font-size: 24px
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+        padding: 35px 6%
+    }
+}
